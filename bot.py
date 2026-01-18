@@ -17,4 +17,7 @@ async def ping(ctx):
 
 TOKEN = os.getenv("BOT_TOKEN")
 
+if TOKEN is None:
+    raise ValueError("BOT_TOKEN não encontrado nas variáveis de ambiente")
+
 bot.run(TOKEN)
